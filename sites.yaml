@@ -1,0 +1,97 @@
+avclub.com:
+  password:
+    reset: http://www.avclub.com/login/reset_password/
+    change: http://www.avclub.com/login/edit_profile/
+  tls: unsupported
+centurylink.com:
+  password:
+    reset: https://eam.centurylink.com/eam/loginTrouble/forgotPassword.do
+    change: https://shop.centurylink.com/MasterWebPortal/freeRange/acctMgmt/ManageMyProfile_goToChangeProfilePassword.action
+  redflags:
+  - Passwords are not allowed to contain certain characters (such as spaces).
+  tls: enforced
+doublefine.com:
+  password:
+    reset: http://www.doublefine.com/forums/member/forgot_password/
+    change: http://www.doublefine.com/forums/member/edit_userpass/
+    length:
+      min: 5
+  tls: optional httpassets
+facebook.com:
+  password:
+    reset: https://www.facebook.com/login/identify
+    change: https://www.facebook.com/settings?tab=account&section=password
+  tls: enforceable
+fluidui.com:
+  password:
+    reset: https://www.fluidui.com/editor/live/
+    change: https://www.fluidui.com/editor/live/
+  tls: optional
+  notes: >
+    http requests to fluidui.com redirect to the equivalent path on
+    https://www.fluidui.com, but HTTP requests to www.fluidui.com are not
+    upgraded to HTTPS.
+    
+    The editor interface is the only way to change or reset passwords.
+bugs.g10code.com:
+  password:
+    reset: https://bugs.g10code.com/gnupg/user?@template=forgotten
+  tls: selfsigned
+linode.com:
+  password:
+    reset: https://manager.linode.com/session/forgot/password
+    change: https://manager.linode.com/profile/index#password
+    rules:
+    - "must contain at least two of these four character classes: lower case letters - upper case letters - numbers - punctuation"
+  timeotp: optional
+  tls: enforced
+mapbox.com:
+  password:
+    reset: https://tiles.mapbox.com/reset-password
+    change: https://tiles.mapbox.com/account/password
+  tls: partial
+path.com:
+  password:
+    reset: https://path.com/forgot-password
+    change: https://path.com/settings
+  tls: enforced
+paypal.com:
+  password:
+    reset: https://www.paypal.com/us/cgi-bin/webscr?cmd=_account-recovery
+    change: https://www.paypal.com/us/cgi-bin/webscr?cmd=_profile-password-start
+    length:
+      min: 8
+      max: 20
+  redflags:
+  - Passwords are not allowed to contain spaces or unprintable characters.
+  tls: enforced
+tweetdeck.com:
+  password:
+    reset: https://web.tweetdeck.com/
+    notes: >
+      TweetDeck's web app allows you to reset your password from the login
+      screen or the Settings dialog. That is the only password change mechanism
+      TweetDeck offers.
+yahoo.com:
+  password:
+    reset: https://edit.yahoo.com/forgotroot
+    change: https://edit.yahoo.com/config/change_pw
+  reportbreach: https://edit.yahoo.com/forgotroot
+  tls: partial
+afraid.org:
+  password:
+    reset: http://freedns.afraid.org/password/
+    change: https://freedns.afraid.org/profile/password.php
+    length:
+      max: 16
+  tls: optional
+aur.archlinux.org:
+  password:
+    reset: https://aur.archlinux.org/passreset/
+    change: https://aur.archlinux.org/account/ + username + /edit/
+  tls: enforced
+npmjs.org:
+  password:
+    reset: https://npmjs.org/forgot
+    change: https://npmjs.org/password
+  tls: enforced
