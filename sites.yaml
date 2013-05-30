@@ -1,3 +1,8 @@
+angel.co:
+  password:
+    reset: https://angel.co/users/password/new
+    change: https://angel.co/settings/password
+  tls: enforced
 avclub.com:
   password:
     reset: http://www.avclub.com/login/reset_password/
@@ -37,6 +42,15 @@ bugs.g10code.com:
   password:
     reset: https://bugs.g10code.com/gnupg/user?@template=forgotten
   tls: selfsigned
+ifttt.com:
+  password:
+    reset: https://ifttt.com/forgot
+  tls: enforced
+linkedin.com:
+  password:
+    reset: https://www.linkedin.com/uas/request-password-reset
+    change: https://www.linkedin.com/uas/change-password
+  tls: optional
 linode.com:
   password:
     reset: https://manager.linode.com/session/forgot/password
@@ -65,6 +79,9 @@ paypal.com:
   redflags:
   - Passwords are not allowed to contain spaces or unprintable characters.
   tls: enforced
+skillswap.com:
+  password:
+  tls: optional
 tweetdeck.com:
   password:
     reset: https://web.tweetdeck.com/
@@ -80,7 +97,7 @@ yahoo.com:
   tls: partial
 afraid.org:
   password:
-    reset: http://freedns.afraid.org/password/
+    reset: https://freedns.afraid.org/password/
     change: https://freedns.afraid.org/profile/password.php
     length:
       max: 16
@@ -95,3 +112,7 @@ npmjs.org:
     reset: https://npmjs.org/forgot
     change: https://npmjs.org/password
   tls: enforced
+heroku.com:
+  password:
+    reset: https://id.heroku.com/account/password/reset
+    change: https://dashboard.heroku.com/account
