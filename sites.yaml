@@ -8,6 +8,16 @@ avclub.com:
     reset: http://www.avclub.com/login/reset_password/
     change: http://www.avclub.com/login/edit_profile/
   tls: unsupported
+bountysource.com:
+  password:
+    rules:
+    - Password must contain a letter and a number
+  profile:
+    - email
+    - city
+    - organization
+    - website
+  tls: enforced
 centurylink.com:
   password:
     reset: https://eam.centurylink.com/eam/loginTrouble/forgotPassword.do
@@ -15,6 +25,16 @@ centurylink.com:
   redflags:
   - Passwords are not allowed to contain certain characters (such as spaces).
   tls: enforced
+coderbits.com:
+  password:
+    reset: https://coderbits.com/passwordreset/initiate
+    change: https://coderbits.com/account/settings#tab-account
+  tls: enforced
+coderbyte.com:
+  password:
+    reset: http://coderbyte.com/sl/forgotPassword/
+    change: http://coderbyte.com/CodingArea/Settings/
+  tls: unsupported
 doublefine.com:
   password:
     reset: http://www.doublefine.com/forums/member/forgot_password/
@@ -42,9 +62,26 @@ bugs.g10code.com:
   password:
     reset: https://bugs.g10code.com/gnupg/user?@template=forgotten
   tls: selfsigned
+gmail.com:
+  username:
+    length:
+      min: 6
+      max: 30
+    password:
+      length:
+        minimum: 8
+heroku.com:
+  password:
+    reset: https://id.heroku.com/account/password/reset
+    change: https://dashboard.heroku.com/account
+  tls: enforced
+html5-ninja.com:
+  password:
+  tls: unsupported
 ifttt.com:
   password:
     reset: https://ifttt.com/forgot
+    change: https://ifttt.com/settings/password
   tls: enforced
 linkedin.com:
   password:
@@ -64,6 +101,19 @@ mapbox.com:
     reset: https://tiles.mapbox.com/reset-password
     change: https://tiles.mapbox.com/account/password
   tls: partial
+mammothhq.com:
+  password:
+    reset: http://mammothhq.com/users/password/new
+    change: http://mammothhq.com/users/edit
+  tls: uncertified optional
+memit.com:
+  password:
+    reset: https://memit.com/user/resetpassword
+    change: https://memit.com/user/profile/#password_reset
+    length:
+      min: 6
+      max:30
+  tls: optional
 path.com:
   password:
     reset: https://path.com/forgot-password
@@ -79,8 +129,15 @@ paypal.com:
   redflags:
   - Passwords are not allowed to contain spaces or unprintable characters.
   tls: enforced
+scraperwiki.com:
+  password:
+    reset: https://scraperwiki.com/accounts/password/reset/
+    change: https://scraperwiki.com/accounts/password/change/
+  tls: enforced
 skillswap.com:
   password:
+    reset: http://www.skillshare.com/reset-password
+    change: http://www.skillshare.com/settings/pw
   tls: optional
 tweetdeck.com:
   password:
@@ -89,12 +146,63 @@ tweetdeck.com:
       TweetDeck's web app allows you to reset your password from the login
       screen or the Settings dialog. That is the only password change mechanism
       TweetDeck offers.
+twilio.com:
+  password:
+    reset:
+    change:
+  tls: enforced
+udemy.com:
+  password: 
+    reset: https://www.udemy.com/user/forgot-password
+    change: https://www.udemy.com/user/edit-account#password
+  tls: enforced
 yahoo.com:
   password:
     reset: https://edit.yahoo.com/forgotroot
     change: https://edit.yahoo.com/config/change_pw
   reportbreach: https://edit.yahoo.com/forgotroot
   tls: partial
+filepicker.io:
+  password:
+    reset: https://developers.filepicker.io/password_reset/
+    change: https://developers.filepicker.io/account/#password-reset
+  tls: enforced
+behance.net:
+  password:
+    reset: http://www.behance.net/account/reset_password
+    change: http://www.behance.net/account/settings#block-account-password
+    length:
+      min: 6
+      max: 32
+  redflags:
+  - Passwords with spaces trigger a "Password must be between 6 and 32 characters" error message.
+  tls: downgraded
+ohloh.net:
+  password:
+    reset: https://www.ohloh.net/password_reset/new
+    change: https://www.ohloh.net/accounts/ + username + /password/edit
+  tls: optional
+projecteuler.net:
+  password:
+    reset: https://projecteuler.net/reset_password
+    change: https://projecteuler.net/account
+    length:
+      min: 1
+      max: 32
+    rules:
+      "Passwords cannot contain more than 32 characters and they only contain upper/lower case alphanumeric characters (A-Z, a-z, 0-9), dot (.), hyphen (-), and underscore (_)."
+  username:
+    reminder: https://projecteuler.net/username_reminder
+  redflags:
+  - Restricted character set for passwords.
+  - Restricted password length.
+  - "Remember Me" creates a p_key cookie rather than changing your session.
+  tls: optional
+wibit.net:
+  password:
+    reset: https://www.wibit.net/user/password
+    change: https://www.wibit.net/user/ + user number + /edit
+  tls: optional httpiframes
 afraid.org:
   password:
     reset: https://freedns.afraid.org/password/
@@ -107,12 +215,22 @@ aur.archlinux.org:
     reset: https://aur.archlinux.org/passreset/
     change: https://aur.archlinux.org/account/ + username + /edit/
   tls: enforced
+bbs.archlinux.org:
+  password:
+    reset: https://bbs.archlinux.org/login.php?action=forget
+    change: https://bbs.archlinux.org/profile.php?action=change_pass&id= + usernumber
+  tls: enforced
 npmjs.org:
   password:
     reset: https://npmjs.org/forgot
     change: https://npmjs.org/password
   tls: enforced
-heroku.com:
+p2pu.org:
   password:
-    reset: https://id.heroku.com/account/password/reset
-    change: https://dashboard.heroku.com/account
+    length:
+      min: 8
+    reset: https://p2pu.org/en/forgot/
+    change: https://p2pu.org/en/profile/edit/password/
+    rules:
+    - Passwords must be at least 8 characters and contain numbers and letters.
+  tls: enforced
