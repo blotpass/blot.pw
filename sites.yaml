@@ -35,6 +35,14 @@ coderbyte.com:
     reset: http://coderbyte.com/sl/forgotPassword/
     change: http://coderbyte.com/CodingArea/Settings/
   tls: unsupported
+digital.darkhorse.com:
+  password:
+    reset: https://digital.darkhorse.com/accounts/password_reset/
+  tls: enforced
+digitalocean.com:
+  password:
+    reset: https://www.digitalocean.com/forgot_password/new
+  tls: enforced
 doublefine.com:
   password:
     reset: http://www.doublefine.com/forums/member/forgot_password/
@@ -46,7 +54,7 @@ facebook.com:
   password:
     reset: https://www.facebook.com/login/identify
     change: https://www.facebook.com/settings?tab=account&section=password
-  tls: enforceable
+  tls: enforced
 fluidui.com:
   password:
     reset: https://www.fluidui.com/editor/live/
@@ -62,14 +70,22 @@ bugs.g10code.com:
   password:
     reset: https://bugs.g10code.com/gnupg/user?@template=forgotten
   tls: selfsigned
+getsomeheadspace.com:
+  password:
+    length:
+      min: 5
+  tls: unsupported
 gmail.com:
   username:
     length:
       min: 6
       max: 30
-    password:
-      length:
-        minimum: 8
+  base: google.com
+google.com:
+  password:
+    reset: https://accounts.google.com/EditPasswd
+    length:
+      minimum: 8
 heroku.com:
   password:
     reset: https://id.heroku.com/account/password/reset
@@ -82,6 +98,13 @@ ifttt.com:
   password:
     reset: https://ifttt.com/forgot
     change: https://ifttt.com/settings/password
+  tls: enforced
+laptopscreen.com:
+  password:
+    reset: https://www.laptopscreen.com/English/section/password-recovery/
+    change: https://www.laptopscreen.com/English/profile/
+    length:
+      min: 6
   tls: enforced
 linkedin.com:
   password:
@@ -129,6 +152,20 @@ paypal.com:
   redflags:
   - Passwords are not allowed to contain spaces or unprintable characters.
   tls: enforced
+rollingstone.com:
+  password:
+    length:
+      min: 6
+    rules:
+    - Must not contain any spaces or special characters
+  redflags:
+  - Restricted character set for password.
+  tls: enforced
+skyeatbelltown.residentportal.com:
+  password:
+    reset: https://skyeatbelltown.residentportal.com/resident_portal/?module=forgot_password
+    change: https://skyeatbelltown.residentportal.com/resident_portal/?module=customer#ChangePassword
+  tls: enforced
 scraperwiki.com:
   password:
     reset: https://scraperwiki.com/accounts/password/reset/
@@ -139,6 +176,22 @@ skillswap.com:
     reset: http://www.skillshare.com/reset-password
     change: http://www.skillshare.com/settings/pw
   tls: optional
+spikeyourjuice.com:
+  password:
+    reset: http://spikeyourjuice.com/ecart/index.php?option=com_user&view=reset
+    length:
+      min: 6
+      max: 100
+    rules:
+      - "No spaces"
+  username:
+    remind: http://spikeyourjuice.com/ecart/index.php?option=com_user&view=remind
+  redflags:
+    - Passwords cannot contain spaces.
+tarsnap.com:
+  password:
+    change: https://www.tarsnap.com/manage.cgi?action=chpassform
+  tls: enforced
 tweetdeck.com:
   password:
     reset: https://web.tweetdeck.com/
@@ -151,10 +204,22 @@ twilio.com:
     reset:
     change:
   tls: enforced
+twitter.com:
+  password:
+    reset: https://twitter.com/account/resend_password
+  tls: enforced
 udemy.com:
   password: 
     reset: https://www.udemy.com/user/forgot-password
     change: https://www.udemy.com/user/edit-account#password
+  tls: enforced
+workflowy.com:
+  password:
+    reset: https://workflowy.com/accounts/password_reset/
+  tls: enforced
+xirsys.com:
+  password:
+    reset: https://manage.xirsys.com/forgotten
   tls: enforced
 yahoo.com:
   password:
@@ -166,6 +231,9 @@ filepicker.io:
   password:
     reset: https://developers.filepicker.io/password_reset/
     change: https://developers.filepicker.io/account/#password-reset
+  tls: enforced
+nitrous.io:
+  password:
   tls: enforced
 behance.net:
   password:
@@ -234,3 +302,8 @@ p2pu.org:
     rules:
     - Passwords must be at least 8 characters and contain numbers and letters.
   tls: enforced
+en.wikipedia.org:
+  password:
+    reset: https://en.wikipedia.org/wiki/Special:PasswordReset
+    change: https://en.wikipedia.org/wiki/Special:ChangePassword
+  tls: optional
