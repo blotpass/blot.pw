@@ -1,0 +1,55 @@
+html, body {
+  margin: 0; padding: 0;
+  width: 100%; height: 100%;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+header {
+  width: 60%;
+  padding: 2vh 0 0;
+  margin: 0 auto;
+  text-align: left;
+}
+h1 {
+  font-size: 3.2rem;
+  font-family: Kavoon, cursive;
+  font-weight: normal;
+  color: #5D6570;
+}
+.blotdot {
+  position: relative;
+}
+.blotdot::before {
+  position: absolute;
+  content: '';
+  background-image: url("/images/blot.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 1ex;
+  height: 1ex;
+  pointer-events: none;
+  display: inline-block;
+  bottom: 2%;
+  left: -25%;
+}
+/* This would be nice if WebKit / Blink weren't broken:
+  https://bugs.webkit.org/show_bug.cgi?id=115930
+  https://code.google.com/p/chromium/issues/detail?id=288202
+
+.blotdot::selection::before {
+  -webkit-filter: invert(100%);
+}
+*/
+#blotout {
+  height: 60vh;
+  width: 60vh;
+  margin: 5vh auto 2.5vh;
+  box-shadow: 1px 1px 5px 1px rgba(0,0,0,.25);
+}
+
+.fields {
+  width: 60%;
+  font-size: 5vh;
+  margin: 2.5vh auto 0;
+}

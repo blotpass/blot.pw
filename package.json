@@ -1,0 +1,25 @@
+{
+  "name": "blot.pw",
+  "version": "0.0.0",
+  "description": "A password store secured by imagination",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stuartpb/blot.pw.git"
+  },
+  "keywords": [
+    "password"
+  ],
+  "author": "Stuart P. Bentley",
+  "license": "BSD",
+  "dependencies": {
+    "hashblot": "~0.1.0",
+    "express": "~3.2.4",
+    "jade": "~0.30.0",
+    "mongoose": "~3.6.11",
+    "bcrypt": "~0.7.5"
+  }
+}
