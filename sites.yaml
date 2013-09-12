@@ -64,7 +64,7 @@ fluidui.com:
     http requests to fluidui.com redirect to the equivalent path on
     https://www.fluidui.com, but HTTP requests to www.fluidui.com are not
     upgraded to HTTPS.
-    
+
     The editor interface is the only way to change or reset passwords.
 bugs.g10code.com:
   password:
@@ -209,9 +209,13 @@ twitter.com:
     reset: https://twitter.com/account/resend_password
   tls: enforced
 udemy.com:
-  password: 
+  password:
     reset: https://www.udemy.com/user/forgot-password
     change: https://www.udemy.com/user/edit-account#password
+  tls: enforced
+vline.com:
+  password:
+    reset: https://vline.com/#_vline_forgotpassword
   tls: enforced
 workflowy.com:
   password:
