@@ -15,4 +15,6 @@ module.exports = function appctor(cfg) {
   app.get('/', function(req,res) {
     res.render('index.jade');
   });
+  
+  return app;
 };
