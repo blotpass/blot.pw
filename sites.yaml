@@ -25,6 +25,12 @@ centurylink.com:
   redflags:
   - Passwords are not allowed to contain certain characters (such as spaces).
   tls: enforced
+cloudflare.com:
+  password:
+    reset: https://www.cloudflare.com/forgot-password
+    length:
+      min: 6
+  tls: enforced
 coderbits.com:
   password:
     reset: https://coderbits.com/passwordreset/initiate
