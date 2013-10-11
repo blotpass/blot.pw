@@ -232,6 +232,17 @@ udemy.com:
     reset: https://www.udemy.com/user/forgot-password
     change: https://www.udemy.com/user/edit-account#password
   tls: enforced
+verizonwireless.com:
+  password:
+    length:
+      min: 8
+      max: 20
+    rules:
+      - 8-20 characters. At least 1 number and 1 letter.
+      - No spaces or special characters (*, &, $, etc.)
+  redflags:
+    - Passwords cannot contain spaces or special characters.
+  tls: required loginonly
 vline.com:
   password:
     reset: https://vline.com/#_vline_forgotpassword
