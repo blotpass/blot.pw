@@ -44,6 +44,11 @@ cloudflare.com:
     length:
       min: 6
   tls: enforced
+codehs.com:
+  password:
+    reset: http://www.codehs.com/forgot_password
+    change: http://www.codehs.com/change_password
+  tls: unsupported
 coderbits.com:
   password:
     reset: https://coderbits.com/passwordreset/initiate
