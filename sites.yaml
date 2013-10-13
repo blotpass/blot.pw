@@ -341,8 +341,12 @@ p2pu.org:
     rules:
     - Passwords must be at least 8 characters and contain numbers and letters.
   tls: enforced
-en.wikipedia.org:
+wikimedia.org:
   password:
-    reset: https://en.wikipedia.org/wiki/Special:PasswordReset
-    change: https://en.wikipedia.org/wiki/Special:ChangePassword
+    reset: https://commons.wikimedia.org/wiki/Special:PasswordReset
+    change: https://commons.wikimedia.org/wiki/Special:ChangePassword
   tls: optional
+wikipedia.org:
+  use: wikimedia.org
+wikivoyage.org:
+  use: wikimedia.org
