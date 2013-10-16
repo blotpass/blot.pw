@@ -123,6 +123,11 @@ ifttt.com:
     reset: https://ifttt.com/forgot
     change: https://ifttt.com/settings/password
   tls: enforced
+koding.com:
+  password:
+    reset: https://koding.com/Recover
+    change: https://koding.com/Account
+  tls: enforced
 laptopscreen.com:
   password:
     reset: https://www.laptopscreen.com/English/section/password-recovery/
