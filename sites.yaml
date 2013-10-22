@@ -332,6 +332,10 @@ bbs.archlinux.org:
     reset: https://bbs.archlinux.org/login.php?action=forget
     change: https://bbs.archlinux.org/profile.php?action=change_pass&id= + usernumber
   tls: enforced
+freesound.org:
+  password:
+    reset: http://www.freesound.org/home/resetpassword/
+  tls: unsupported
 npmjs.org:
   password:
     reset: https://npmjs.org/forgot
