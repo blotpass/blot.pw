@@ -74,6 +74,10 @@ doublefine.com:
     length:
       min: 5
   tls: optional httpassets
+eventbrite.com:
+  password:
+    reset: https://www.eventbrite.com/resetpassword
+  tls: enforced
 facebook.com:
   password:
     reset: https://www.facebook.com/login/identify
@@ -90,6 +94,12 @@ fluidui.com:
     upgraded to HTTPS.
 
     The editor interface is the only way to change or reset passwords.
+freelancer.com:
+  password:
+    reset: https://www.freelancer.com/#forgot-password-toggle
+  redflags:
+    - Password selection rejects any password without numbers as "weak".
+  tls: optional
 bugs.g10code.com:
   password:
     reset: https://bugs.g10code.com/gnupg/user?@template=forgotten
@@ -100,16 +110,18 @@ getsomeheadspace.com:
       min: 5
   tls: unsupported
 gmail.com:
-  username:
-    length:
-      min: 6
-      max: 30
-  base: google.com
+  use: google.com
 google.com:
   password:
     reset: https://accounts.google.com/EditPasswd
     length:
-      minimum: 8
+      min: 8
+      max: 100
+guru.com:
+  password:
+    length:
+      min: 8
+  tls: enforced
 heroku.com:
   password:
     reset: https://id.heroku.com/account/password/reset
@@ -117,6 +129,7 @@ heroku.com:
   tls: enforced
 html5-ninja.com:
   password:
+    reset: http://html5-ninja.com/#/account
   tls: unsupported
 ifttt.com:
   password:
